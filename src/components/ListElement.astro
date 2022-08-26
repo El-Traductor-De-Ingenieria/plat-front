@@ -1,0 +1,22 @@
+---
+export interface Props {
+    text: string;
+}
+
+const { text } = Astro.props as Props;
+---
+
+<li>
+    <h2>{text}</h2>
+</li>
+
+<style>
+    li {
+        display: inline;
+    }
+
+    h2 {
+        font-size: var(--font-size-lg);
+        color: var(--color-alt-text);
+    }
+</style>
