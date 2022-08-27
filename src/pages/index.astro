@@ -1,28 +1,30 @@
 ---
 import Wrapper from '../layouts/Wrapper.astro';
-import ListElement from '../components/ListElement.astro';
-import cat from '../images/cat.jpg';
+/* import ListElement from '../components/ListElement.astro';
+import cat from '/images/cat.jpg'; */
 
-const tecnologies = ["Astro", "React", "TypeScript"];
+import { Header } from '../components/Header';
+
+/* const tecnologies = ['Astro', 'React', 'TypeScript']; */
 ---
 
 <Wrapper title="Proyecto Plataforma v2">
-	<main>
+	<Header></Header>
+	<!-- <main>
 		<h1>Proyecto Plataforma <span>v2</span></h1>
-		<h2>Este proyecto utiliza las siguientes tecnologías: </h2>
+		<h2>Este proyecto utiliza las siguientes tecnologías:</h2>
+
 		
-		<!-- Ejemplo básico de capacidades de Astro -->
 		<ul>
-			{tecnologies.map((data) => <ListElement text={data}/>)}
+			{tecnologies.map((data) => <ListElement text={data} />)}
 		</ul>
 
-		<img src={cat} alt="El Diseño Gráfico es mi Pasión">
-
-	</main>
+		<img src={cat} alt="El Diseño Gráfico es mi Pasión" />
+	</main> -->
 </Wrapper>
 
 <style>
-	h1 {
+	/* h1 {
 		margin: 2rem 0;
 		text-align: center;
 	}
@@ -39,15 +41,16 @@ const tecnologies = ["Astro", "React", "TypeScript"];
 
 	ul {
 		text-align: center;
-	}
+	} */
 
 	img {
 		margin: auto;
 		display: block;
+		max-width: 100%;
 	}
 
-	main {
+	/* main {
 		margin: auto;
 		padding: 1em;
-	}
+	} */
 </style>
