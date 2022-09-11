@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    background-color: rgb(114, 137, 218);
+    border-color: rgb(66, 69, 73);
+    color: var(--color-text);
+    
+    border-radius: 12px;
+    padding: 10px;
+    text-align: center;
+
+    transition: transform .12s;
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.04);
+    }
+}
+

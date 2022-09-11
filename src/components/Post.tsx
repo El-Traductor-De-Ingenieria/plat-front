@@ -1,5 +1,5 @@
-import type { Article } from '../models';
-import '../styles/post.scss';
+import '@styles/post.scss';
+import type { Article } from '@models/index';
 
 export function Post({ description, image, points, tags, title }: Article) {
 	return (
