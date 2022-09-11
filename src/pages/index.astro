@@ -1,12 +1,13 @@
 ---
 import Wrapper from '@layouts/Wrapper.astro';
-import { Header, Posts, DiscordButton } from '@components/index';
+import { Header, Posts, DiscordButton, Test } from '@components/index';
 ---
 
 <Wrapper title="Proyecto Plataforma v2">
 	<Header>
 		<h1>Login</h1>
-		<DiscordButton client:load text = "Login with Discord!" />
+		<DiscordButton text = "Login with Discord!" />
+		<Test client:load/>
 		<h1>Posts</h1>
 	</Header>
 	<Posts />
