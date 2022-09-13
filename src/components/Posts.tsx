@@ -1,5 +1,5 @@
 import { Post } from './Post';
-import type { Article } from '../models';
+import type { Article } from '@models/index';
 
 const posts: Article[] = [
 	{
