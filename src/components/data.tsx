@@ -1,6 +1,6 @@
-import type { Resourse } from '../models';
-import { Recursos } from '../components/Resourse'
-export const resourses: Resourse[] = [
+import type { Resource } from '../models';
+import { Recursos } from './Resource'
+export const resourses: Resource[] = [
 	{
 		id: 0,
 		title: "El cálculo de Desconocido 8va edicion",

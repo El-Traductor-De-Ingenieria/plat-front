@@ -1,6 +1,6 @@
 import '../styles/post.scss';
 
-export function ListOfResourse() {
+export function ListOfResource() {
     return (<div className="flex justify-center my-5">
     <div className="w-3/4">
         <form>

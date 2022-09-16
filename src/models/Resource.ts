@@ -1,4 +1,4 @@
-export interface Resourse {
+export interface Resource {
 	id: number;
 	author: string;
 	title: string;

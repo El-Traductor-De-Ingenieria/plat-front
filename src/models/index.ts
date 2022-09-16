@@ -1,1 +1,1 @@
-export type { Resourse } from './Resourse';
+export type { Resource } from './Resource';
