@@ -14,6 +14,6 @@ export function Test() {
 	useEffect(() => {
 		getData().then(setData);
 	}, []);
-
+  
 	return <div>{JSON.stringify(data)}</div>;
 }
