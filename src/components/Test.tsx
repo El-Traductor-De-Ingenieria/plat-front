@@ -6,7 +6,6 @@ const getData = async () => {
 	});
 
 	const data = await res.json();
-
 	return data;
 };
 
@@ -15,5 +14,6 @@ export function Test() {
 	useEffect(() => {
 		getData().then(setData);
 	}, []);
+  
 	return <div>{JSON.stringify(data)}</div>;
 }

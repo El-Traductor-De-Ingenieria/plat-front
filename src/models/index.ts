@@ -1,1 +1,1 @@
-export type { Article } from './Article';
+export type { Resourse } from './Resourse';
