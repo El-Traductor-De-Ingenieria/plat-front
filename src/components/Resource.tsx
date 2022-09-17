@@ -1,7 +1,7 @@
-import type { Resourse } from '../models';
+import type { Resource } from '../models';
 import '../styles/post.scss';
 
-export function Recursos({ description,author, title,filename }: Resourse) {
+export function Recursos({ description,author, title,filename }: Resource) {
     
 	return (
 			<li className="pb-3 sm:pb-4">
