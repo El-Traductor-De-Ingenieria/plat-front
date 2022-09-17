@@ -1,5 +1,5 @@
-import type { Resource } from '../models';
-import '../styles/post.scss';
+import type Resource from '@models/Resource';
+import '@styles/post.scss';
 
 export function Recursos({ description,author, title,filename }: Resource) {
     

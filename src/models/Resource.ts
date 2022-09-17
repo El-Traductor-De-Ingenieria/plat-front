@@ -1,4 +1,4 @@
-export interface Resource {
+export default interface Resource {
 	id: number;
 	author: string;
 	title: string;

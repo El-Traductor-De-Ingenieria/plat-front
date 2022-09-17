@@ -1,4 +1,4 @@
-import '../styles/post.scss';
+import '@styles/post.scss';
 
 export function ListOfResource() {
     return (<div className="flex justify-center my-5">

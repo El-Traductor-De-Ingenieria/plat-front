@@ -1,4 +1,4 @@
-import type { Resource } from '../models';
+import type Resource from '@models/Resource';
 import { Recursos } from './Resource'
 export const resourses: Resource[] = [
 	{
