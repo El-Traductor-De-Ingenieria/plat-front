@@ -1,13 +1,10 @@
 ---
-import ListOfResource from "@layouts/ListOfResource.astro";
 import Wrapper from "@layouts/Wrapper.astro";
-import { Res } from "@components/resources/data";
+import ResourcesList from '@components/resources/ResourcesList.astro';
 ---
 
 <Wrapper title="Proyecto Plataforma v2">
-	<ListOfResource>
-			<Res></Res>	
-    </ListOfResource>
+	<ResourcesList/>
 </Wrapper>
 
 <style>
