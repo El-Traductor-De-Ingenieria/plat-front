@@ -1,5 +1,5 @@
 import type Resource from '@models/Resource';
-import { Recursos } from './Resource'
+import { Recursos } from '@components/resources/Resource'
 export const resourses: Resource[] = [
 	{
 		id: 0,

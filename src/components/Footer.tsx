@@ -1,4 +1,4 @@
-export default function Footer() {
+export function Footer() {
 	return <footer>
     <div className="max-w-6xl mx-auto px-4 sm:px-4">
         <div
@@ -38,3 +38,5 @@ export default function Footer() {
     </div>
 </footer>
 }
+
+export default Footer;
