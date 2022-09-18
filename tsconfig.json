@@ -37,6 +37,7 @@
       "@layouts/*": ["layouts/*"],
       "@models/*": ["models/*"],
       "@styles/*": ["styles/*"],
+      "@images/*": ["images/*"],
     }
   }
 }

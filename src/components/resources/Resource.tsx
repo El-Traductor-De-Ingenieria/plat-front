@@ -1,5 +1,14 @@
 import '@styles/post.scss';
 
+import music from '@images/extensions/music.png';
+import text from '@images/extensions/text.png';
+import image from '@images/extensions/image.png';
+import video from '@images/extensions/video.png';
+import compressed from '@images/extensions/compressed.png';
+import pdf from '@images/extensions/pdf.png';
+import unknownImage from '@images/extensions/unknown.png';
+
+
 interface Resource {
 	id: number;
 	author: string;
@@ -9,27 +18,28 @@ interface Resource {
 }
 
 function getFileExtension(fileName: string): string {
-    return fileName.split('.').pop()!;
+    return fileName.split('.').pop()!.toUpperCase();
 }
 
-function getTypeOfFile(fileExtension: string): string {
+function getFileIcon(fileExtension: string): string {
     let fileTypes = {
-        "music": ['WAV', 'MP3', 'OPUS', 'OGG'],
-        "text": ['TXT', 'DIC', 'DOC', 'TEX', 'DIZ', 'EXC', 'IDX', 'LOG'],
-        "image": ['BMP', 'GIF', 'JPG', 'TIF', 'PNG'],
-        "video": ['MP4', 'MOV', 'WMV', 'AVI', 'AVCHD', 'FLV', 'F4V', 'SWF'],
-        "compressed": ['ZIP', 'RAR'],
-        "pdf": ['PDF'],
+        [music]: ['WAV', 'MP3', 'OPUS', 'OGG'],
+        [text]: ['TXT', 'DIC', 'DOC', 'TEX', 'DIZ', 'EXC', 'IDX', 'LOG'],
+        [image]: ['BMP', 'GIF', 'JPG', 'TIF', 'PNG'],
+        [video]: ['MP4', 'MOV', 'WMV', 'AVI', 'AVCHD', 'FLV', 'F4V', 'SWF'],
+        [compressed]: ['ZIP', 'RAR'],
+        [pdf]: ['PDF'],
     };
+
 
     let fType: keyof typeof fileTypes;
 
     for (fType in fileTypes) {
-        const extensions = fileTypes[fType];
+        const extensions = fileTypes[fType]!;
         if (extensions.includes(fileExtension)) return fType;
     }
     
-    return 'unknown';
+    return unknownImage;
 }
 
 
@@ -40,7 +50,7 @@ export function Resource({author, title, description, filename}: Resource) {
             <div className="flex-shrink-0">
                 <img
                     className="w-8 h-8"
-                    src={ `../../public/images/extensions/${getTypeOfFile(getFileExtension(filename).toUpperCase())}.png` }
+                    src={ getFileIcon(getFileExtension(filename)) }
                     alt={ `Archivo .${getFileExtension(filename)}` }
                 />
             </div>
@@ -60,7 +70,7 @@ export function Resource({author, title, description, filename}: Resource) {
             </div>
 
             <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                { getFileExtension(filename.toUpperCase()) }
+                { getFileExtension(filename) }
             </div>
         </div>
     </li>
