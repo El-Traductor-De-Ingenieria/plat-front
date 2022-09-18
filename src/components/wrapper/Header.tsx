@@ -1,4 +1,4 @@
-import Logo from "./Logo";
+import Logo from "@components/wrapper/Logo";
 
 export function Header() {
 	return <header
