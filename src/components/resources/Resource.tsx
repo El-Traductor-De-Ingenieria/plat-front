@@ -9,7 +9,7 @@ import pdf from '@images/extensions/pdf.png';
 import unknownImage from '@images/extensions/unknown.png';
 
 
-interface Resource {
+interface Props {
 	id: number;
 	author: string;
 	title: string;
@@ -43,7 +43,7 @@ function getFileIcon(fileExtension: string): string {
 }
 
 
-export function Resource({author, title, description, filename}: Resource) {
+export function Resource({author, title, description, filename}: Props) {
     return (
     <li className="pb-3 sm:pb-4">
         <div className="flex items-center space-x-4">

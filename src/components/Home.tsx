@@ -17,7 +17,7 @@ export function Home({ loginURL }: Props) {
 						<div className="max-w-none flex justify-center">
 							<div>
 								<a className="text-white bg-blue-600 hover:bg-blue-800 mb-4 sm:mb-0 font-bold py-2 px-4 rounded"
-									href={loginURL} target="_blank" rel="noopener">Iniciar sesión
+									href={ loginURL } target="_blank" rel="noopener">Iniciar sesión
 								</a>
 							</div>
 							<div>

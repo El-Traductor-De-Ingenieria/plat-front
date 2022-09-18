@@ -10,13 +10,13 @@
 		"astro": "astro"
 	},
 	"dependencies": {
-		"@astrojs/tailwind": "^1.0.0",
 		"autoprefixer": "10.4.10",
 		"normalize.css": "8.0.1",
 		"sass": "1.54.9"
 	},
 	"devDependencies": {
 		"@astrojs/react": "1.1.2",
+		"@astrojs/tailwind": "^1.0.0",
 		"@tailwindcss/typography": "^0.5.7",
 		"@types/react": "18.0.19",
 		"astro": "1.2.2",
