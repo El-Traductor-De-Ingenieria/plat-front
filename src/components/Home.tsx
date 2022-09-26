@@ -1,4 +1,28 @@
+import { useEffect, useState } from 'react';
+import { Navigate } from "react-router-dom";
+//import  { Redirect } from 'react-router-dom'
+
+const getData = async () => {
+	const res = await fetch('http://localhost:3000/api/auth/status', {
+		credentials: 'include'
+	});
+
+	const data = await res.json();
+	return data;
+};
+
 export function Home() {
+	const [data, setData] = useState({});
+	useEffect(() => {
+		getData().then(setData);
+	}, []);
+	let response=JSON.parse(JSON.stringify(data))
+	if(response.id){
+		console.log(":D");
+		window.location.href = 'http://localhost:8080/Resources';
+		//<Navigate to="/Resources" state={{ from: location }} replace />;
+	}
+	console.log(response)
 	return (<section>
 		<div className="max-w-6xl mx-auto px-4 sm:px-6">
 			<div className="py-12 md:py-20">
@@ -13,7 +37,7 @@ export function Home() {
 						<div className="max-w-none flex justify-center">
 							<div>
 								<a className="text-white bg-blue-600 hover:bg-blue-800 mb-4 sm:mb-0 font-bold py-2 px-4 rounded"
-									href="http://localhost:3001/api/auth/login" target="_blank" rel="noopener">Iniciar sesión
+									href="http://localhost:3000/api/auth/login" rel="noopener">Iniciar sesión
 								</a>
 							</div>
 							<div>

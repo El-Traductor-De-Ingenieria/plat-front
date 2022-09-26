@@ -1,5 +1,7 @@
+import { useEffect, useState } from 'react';
+import { Recursos } from './Resource';
 import type { Resource } from '../models';
-import { Recursos } from './Resource'
+
 export const resourses: Resource[] = [
 	{
 		id: 0,
@@ -41,8 +43,24 @@ export const resourses: Resource[] = [
 
 ];
 
+const getData = async () => {
+	const res = await fetch('http://localhost:3000/api/auth/status', {
+		credentials: 'include'
+	});
 
-export function Res() {
+	const data = await res.json();
+	return data;
+};
+const logout = async () => {
+	const res = await fetch('http://localhost:3000/api/auth/logout', {
+		credentials: 'include'
+	});
+
+	const data = await res.json();
+	return data;
+};
+
+export function Resp() {
 	return resourses.map(({ id, title, description, author, filename }) => {
 		return (
 			<Recursos
@@ -54,4 +72,21 @@ export function Res() {
 			></Recursos>
 		);
 	});
+}
+
+export function ListOfResources() {
+    const [data, setData] = useState({});
+	useEffect(() => {
+		getData().then(setData);
+	}, []);
+	let response=JSON.parse(JSON.stringify(data))
+    console.log(":/")
+    console.log(response);
+	if(response.id){
+        console.log(response)
+		console.log(":D");
+		window.location.href = 'http://localhost:8080/';
+	}
+	console.log(response)
+return <h1>Hello</h1>
 }

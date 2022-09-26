@@ -20,7 +20,7 @@ export function Header() {
 						data-aw-toggle-color-scheme
 					>
 						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
-							<path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+							<path d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
 						</svg>
 					</button>
 				</div>
@@ -28,7 +28,6 @@ export function Header() {
 			<nav
 				className="items-center w-full md:w-auto hidden md:flex text-gray-600 dark:text-slate-200 h-screen md:h-auto"
 				aria-label="Main navigation"
-				id="menu"
 			>
 				<ul
 					className="flex flex-col pt-8 md:pt-0 md:flex-row md:self-center collapse w-full md:w-auto collapsed text-xl md:text-base"
@@ -49,7 +48,7 @@ export function Header() {
 						<button
 							type="button"
 							className="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
-							aria-label="lternar entre el modo Oscuro y Claro"
+							aria-label="alternar entre el modo Oscuro y Claro"
 							data-aw-toggle-color-scheme
 						>
 							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
@@ -87,7 +86,6 @@ export function Header() {
 						<button
 							type="button"
 							className="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
-							id="user-menu-button"
 							aria-expanded="false"
 							data-dropdown-toggle="user-dropdown"
 							data-dropdown-placement="bottom"
@@ -114,13 +112,10 @@ export function Header() {
 											xmlns="http://www.w3.org/2000/svg"
 											fill="none"
 											viewBox="0 0 24 24"
-											stroke-width="1.5"
 											stroke="currentColor"
 											className="w-6 h-6"
 										>
 											<path
-												stroke-linecap="round"
-												stroke-linejoin="round"
 												d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z"
 											></path>
 										</svg>
@@ -133,13 +128,10 @@ export function Header() {
 											xmlns="http://www.w3.org/2000/svg"
 											fill="none"
 											viewBox="0 0 24 24"
-											stroke-width="1.5"
 											stroke="currentColor"
 											className="w-6 h-6"
 										>
 											<path
-												stroke-linecap="round"
-												stroke-linejoin="round"
 												d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75"
 											></path>
 										</svg>

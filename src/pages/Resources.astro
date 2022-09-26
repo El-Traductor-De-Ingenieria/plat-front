@@ -1,12 +1,19 @@
 ---
 import ListOfResource from '../layouts/ListOfResource.astro';
 import Wrapper from '../layouts/Wrapper.astro';
-import { Res } from '../components/data';
+//import { Res } from '../components/data';
+import { Search } from '@components/Search';
+import { ListOfResources, Resp } from '@components/ListOfResources';
+import { Upload } from '@components/Upload'
 ---
 
 <Wrapper title="Proyecto Plataforma v2">
+	<Upload client:load></Upload>
 	<ListOfResource>
-			<Res></Res>	
+			<Search></Search>
+			<ListOfResources></ListOfResources>
+			<Resp></Resp>
+			<!-- <Res></Res>	 -->
     </ListOfResource>
 </Wrapper>
 
