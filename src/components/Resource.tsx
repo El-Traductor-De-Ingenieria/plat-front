@@ -1,5 +1,4 @@
 import type { Resource } from '../models';
-import '../styles/post.scss';
 
 export function Recursos({ description,author, title,filename }: Resource) {
     
@@ -9,7 +8,7 @@ export function Recursos({ description,author, title,filename }: Resource) {
                     <div className="flex-shrink-0">
                         <img
                             className="w-8 h-8"
-                            src={"../../public/images/extensions/"+getTypeofFile(getFileExtension(filename).toUpperCase())+".png"}
+                            src={"../../images/extensions/"+getTypeofFile(getFileExtension(filename).toUpperCase())+".png"}
                             alt={"Archivo ."+getFileExtension(filename)}
                         />
                     </div>
