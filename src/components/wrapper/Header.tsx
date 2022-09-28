@@ -1,6 +1,5 @@
-import type { ReactNode } from 'react';
+import Logo from "@components/wrapper/Logo";
 
-import { Logo } from "./Logo";
 export function Header() {
 	return <header
 		className="sticky top-0 z-40 flex-none mx-auto w-full bg-white md:bg-white/90 dark:bg-slate-900 dark:md:bg-slate-900/90 md:backdrop-blur-sm border-b dark:border-b-0"
@@ -154,3 +153,5 @@ export function Header() {
 		</div>
 	</header>;
 }
+
+export default Header;

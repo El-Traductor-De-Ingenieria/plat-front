@@ -3,3 +3,5 @@ export function Logo() {
     📚 La biblioteca de recursos
   </span>;
 }
+
+export default Logo;

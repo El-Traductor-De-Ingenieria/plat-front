@@ -1,5 +1,9 @@
-export function Home() {
-	return (<section>
+interface Props {
+	loginURL: string
+}
+
+export function Home({ loginURL }: Props) {
+	return <section>
 		<div className="max-w-6xl mx-auto px-4 sm:px-6">
 			<div className="py-12 md:py-20">
 				<div className="text-center pb-12 md:pb-16">
@@ -13,7 +17,7 @@ export function Home() {
 						<div className="max-w-none flex justify-center">
 							<div>
 								<a className="text-white bg-blue-600 hover:bg-blue-800 mb-4 sm:mb-0 font-bold py-2 px-4 rounded"
-									href="http://localhost:3001/api/auth/login" target="_blank" rel="noopener">Iniciar sesión
+									href={ loginURL } target="_blank" rel="noopener">Iniciar sesión
 								</a>
 							</div>
 							<div>
@@ -23,5 +27,7 @@ export function Home() {
 				</div>
 			</div>
 		</div>
-	</section>)
+	</section>
 }
+
+export default Home;

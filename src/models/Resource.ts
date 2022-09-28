@@ -5,3 +5,5 @@ export interface Resource {
 	description:string;
 	filename: string;
 }
+
+export default Resource;
