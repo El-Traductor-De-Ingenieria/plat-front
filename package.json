@@ -7,22 +7,22 @@
 		"start": "astro dev",
 		"build": "astro build",
 		"preview": "astro preview",
-		"astro": "astro"
+		"astro": "astro",
+		"prettier": "prettier -w src/"
 	},
 	"dependencies": {
-		"@astrojs/tailwind": "^1.0.0",
 		"autoprefixer": "10.4.10",
 		"normalize.css": "8.0.1",
-		"react-router-dom": "^6.4.0",
 		"sass": "1.54.9"
 	},
 	"devDependencies": {
 		"@astrojs/react": "1.1.2",
+		"@astrojs/tailwind": "^1.0.0",
 		"@tailwindcss/typography": "^0.5.7",
 		"@types/react": "^18.0.19",
-		"@types/react-router-dom": "^5.3.3",
 		"astro": "1.2.2",
-		"prettier": "2.7.1",
+		"prettier": "^2.7.1",
+		"prettier-plugin-astro": "^0.5.4",
 		"react": "18.2.0",
 		"react-dom": "18.2.0"
 	}

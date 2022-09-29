@@ -1,3 +1,1 @@
-export function useUpload(){
-    
-}
+export function useUpload() {}
