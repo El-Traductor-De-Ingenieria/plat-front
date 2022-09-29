@@ -155,6 +155,8 @@ export function Upload() {
 	</div>)
 }
 
+export default Upload;
+
 function closeModal() {
 
 }
