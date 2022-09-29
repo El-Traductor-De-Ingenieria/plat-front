@@ -1,2 +1,2 @@
-export function Search() { }
+export function Search() {}
 export default Search;
