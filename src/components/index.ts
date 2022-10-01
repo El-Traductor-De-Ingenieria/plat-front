@@ -1,4 +1,2 @@
-export { Header } from './Header';
-export { DiscordButton } from './DiscordButton';
-export { Test } from './Test';
-export { Search } from './Search';
+export { Home } from '@components/Home';
+export { Test } from '@components/Test';
