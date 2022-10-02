@@ -1,11 +1,8 @@
 ---
-import Wrapper from '@layouts/Wrapper.astro';
-import { Search, Upload } from '@components/resources/index';
-import ResourceList from '@components/resources/ResourceList.astro';
+import Wrapper from "@layouts/Wrapper.astro";
+import ResourcesList from '@components/resources/ResourcesList.astro';
 ---
 
 <Wrapper title="Proyecto Plataforma v2">
-	<Upload client:load />
-	<Search />
-	<ResourceList />
+	<ResourcesList/>
 </Wrapper>

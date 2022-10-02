@@ -1,1 +1,1 @@
-export type { Alert } from '@models/Alert';
+export type { Resource } from './Resource';

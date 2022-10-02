@@ -1,0 +1,22 @@
+---
+import Resource from "@components/resources/Resource";
+import sampleData from "@components/resources/sampleData.json";
+import { Search } from "@components/resources/Search";
+---
+
+<div class="flex justify-center my-5">
+    <div class="w-3/4">
+        <Search client:load></Search>
+        <ul class="my-5 divide-y divide-gray-200 dark:divide-gray-700">
+            { sampleData.map((data) =>
+                <Resource
+                    id={data.id}
+                    author={data.author}
+                    title={data.title}
+                    description={data.description}
+                    filename={data.filename}
+                />
+            ) }
+        </ul>
+    </div>
+</div>
