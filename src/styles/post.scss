@@ -1,55 +1,55 @@
 .post {
-	border-radius: 0.5em;
-	background-color: var(--secondary-bg-colour);
-	padding: 1em;
+    border-radius: 0.5em;
+    background-color: var(--secondary-bg-colour);
+    padding: 1em;
 
-	&__header {
-		grid-area: header;
-	}
+    &__header {
+        grid-area: header;
+    }
 
-	&__text {
-		grid-area: text;
-	}
+    &__text {
+        grid-area: text;
+    }
 
-	&__tag-list {
-		display: flex;
-		column-gap: 0.5ch;
-		grid-area: tags;
-	}
+    &__tag-list {
+        display: flex;
+        column-gap: 0.5ch;
+        grid-area: tags;
+    }
 
-	&__body {
-		display: grid;
-		grid-template-areas:
-			'header'
-			'tags'
-			'text'
-			'actions';
-		grid-template-rows: auto auto auto 1fr;
-	}
+    &__body {
+        display: grid;
+        grid-template-areas:
+            'header'
+            'tags'
+            'text'
+            'actions';
+        grid-template-rows: auto auto auto 1fr;
+    }
 
-	&__image {
-		border-radius: 0.5ch;
-		aspect-ratio: 16 / 9;
-	}
+    &__image {
+        border-radius: 0.5ch;
+        aspect-ratio: 16 / 9;
+    }
 
-	&__tag {
-		background-color: var(--color-alt-text);
-		color: var(--body-bg-colour);
-		border-radius: 1em;
-		padding: 0.2em 0.8em;
-		font-weight: 900;
-		font-size: 0.7rem;
-	}
+    &__tag {
+        background-color: var(--color-alt-text);
+        color: var(--body-bg-colour);
+        border-radius: 1em;
+        padding: 0.2em 0.8em;
+        font-weight: 900;
+        font-size: 0.7rem;
+    }
 
-	&__actions {
-		grid-area: actions;
-		/* display: flex;
+    &__actions {
+        grid-area: actions;
+        /* display: flex;
 		justify-content: space-between;
 		gap: 1em;
 		align-self: end; */
-	}
+    }
 
-	/* &__icon {
+    /* &__icon {
 		&--preview,
 		&--code {
 			mask-repeat: no-repeat;
@@ -73,16 +73,16 @@
 }
 
 @media only screen and (min-width: 1070px) {
-	.post {
-		display: flex;
-		gap: 1em;
+    .post {
+        display: flex;
+        gap: 1em;
 
-		&__body {
-			flex-grow: 1;
-		}
+        &__body {
+            flex-grow: 1;
+        }
 
-		&__image {
-			max-width: 25rem;
-		}
-	}
+        &__image {
+            max-width: 25rem;
+        }
+    }
 }
