@@ -1,3 +1,5 @@
+import type Props from "@models/ResourceProps";
+
 import '@styles/post.scss';
 
 import music from '@images/extensions/music.png';
@@ -8,13 +10,6 @@ import compressed from '@images/extensions/compressed.png';
 import pdf from '@images/extensions/pdf.png';
 import unknownImage from '@images/extensions/unknown.png';
 
-export interface ResourceProps {
-	id: number;
-	author: string;
-	title: string;
-	description: string;
-	filename: string;
-}
 
 function getFileExtension(fileName: string): string {
 	return fileName.split('.').pop()!.toUpperCase();
@@ -30,17 +25,17 @@ function getFileIcon(fileExtension: string): string {
 		[pdf]: ['PDF'],
 	};
 
-	let fType: keyof typeof fileTypes;
+    let imageFile: keyof typeof fileTypes;
 
-	for (fType in fileTypes) {
-		const extensions = fileTypes[fType]!;
-		if (extensions.includes(fileExtension)) return fType;
-	}
-
-	return unknownImage;
+    for (imageFile in fileTypes) {
+        const extensions = fileTypes[imageFile]!;
+        if (extensions.includes(fileExtension)) return imageFile;
+    }
+    
+    return unknownImage;
 }
 
-export function Resource({ author, title, description, filename }: ResourceProps) {
+export function Resource({ author, title, description, filename }: Props) {
 	return (
 		<li className="pb-3 sm:pb-4">
 			<div className="flex items-center space-x-4">
