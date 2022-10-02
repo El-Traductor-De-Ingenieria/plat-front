@@ -8,7 +8,7 @@ import compressed from '@images/extensions/compressed.png';
 import pdf from '@images/extensions/pdf.png';
 import unknownImage from '@images/extensions/unknown.png';
 
-interface Props {
+export interface ResourceProps {
 	id: number;
 	author: string;
 	title: string;
@@ -40,7 +40,7 @@ function getFileIcon(fileExtension: string): string {
 	return unknownImage;
 }
 
-export function Resource({ author, title, description, filename }: Props) {
+export function Resource({ author, title, description, filename }: ResourceProps) {
 	return (
 		<li className="pb-3 sm:pb-4">
 			<div className="flex items-center space-x-4">
@@ -76,5 +76,6 @@ export function Resource({ author, title, description, filename }: Props) {
 		</li>
 	);
 }
+
 
 export default Resource;
