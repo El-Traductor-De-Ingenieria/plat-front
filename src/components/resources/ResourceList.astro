@@ -1,6 +1,7 @@
 ---
 import Resource from '@components/resources/Resource';
 import sampleData from '@components/resources/sampleData.json';
+import ListOfResources from '@components/resources/ListOfResources';
 ---
 
 <div class="flex justify-center my-5">
@@ -67,6 +68,7 @@ import sampleData from '@components/resources/sampleData.json';
 			</button>
 		</form>
 		<ul class="my-5 divide-y divide-gray-200 dark:divide-gray-700">
+			<ListOfResources client:load />
 			{
 				sampleData.map(data => (
 					<Resource

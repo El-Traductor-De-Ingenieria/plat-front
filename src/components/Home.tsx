@@ -1,8 +1,30 @@
+import { useEffect, useState } from 'react';
+
 interface Props {
 	loginURL: string;
+	resourceURL: string;
 }
 
-export function Home({ loginURL }: Props) {
+
+const getData = async () => {
+	var res = await fetch('http://localhost:3000/api/auth/status', {
+		credentials: 'include'
+	});
+
+	const data = await res.json();
+
+	if(data && data.username) return true;
+	else return false;
+
+	return data;
+};
+
+export function Home({ loginURL, resourceURL }: Props) {
+	const [isLoggedIn, setData] = useState<boolean>(false);
+	useEffect(() => {
+		getData().then(setData);
+	}, []);
+
 	return (
 		<section>
 			<div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -24,11 +46,11 @@ export function Home({ loginURL }: Props) {
 								<div>
 									<a
 										className="text-white bg-blue-600 hover:bg-blue-800 mb-4 sm:mb-0 font-bold py-2 px-4 rounded"
-										href={loginURL}
-										target="_blank"
+										href={isLoggedIn ? resourceURL : loginURL}
+										target={isLoggedIn ? "_self" : "_blank"}
 										rel="noopener"
 									>
-										Iniciar sesión
+										{isLoggedIn ? "Acceder" : "Iniciar sesión"}
 									</a>
 								</div>
 								<div></div>
