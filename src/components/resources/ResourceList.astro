@@ -2,8 +2,9 @@
 import Resource from '@components/resources/Resource';
 import sampleData from '@components/resources/sampleData.json';
 import ListOfResources from '@components/resources/ListOfResources';
----
+import { HideUpload } from '@components/resources';
 
+---
 <div class="flex justify-center my-5">
 	<div class="w-3/4">
 		<form>
@@ -46,26 +47,7 @@ import ListOfResources from '@components/resources/ListOfResources';
 					Buscar
 				</button>
 			</div>
-			<button
-				type="button"
-				class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-			>
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					fill="none"
-					viewBox="0 0 24 24"
-					stroke-width="1.5"
-					stroke="currentColor"
-					class="w-6 h-6"
-				>
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
-					></path>
-				</svg>
-				Añadir recurso
-			</button>
+			<HideUpload client:load></HideUpload>
 		</form>
 		<ul class="my-5 divide-y divide-gray-200 dark:divide-gray-700">
 			<ListOfResources client:load />
